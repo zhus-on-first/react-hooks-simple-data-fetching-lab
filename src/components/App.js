@@ -10,6 +10,9 @@ function App() {
       .then((data) => {
         setDogImage(data.message);
         setIsLoaded(true);
+      })
+      .catch((error) => {
+        return console.log("Error fetching dog image", error);
       });
   }, []);
   if (!isLoaded) {
